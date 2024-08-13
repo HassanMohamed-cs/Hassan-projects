@@ -1,1 +1,17 @@
-
+Solution:
+osc@osc:~$ mkdir Hassan
+osc@osc:~$ cd Hassan
+osc@osc:~/Hassan$ touch one.txt two.txt three.txt four.txt
+osc@osc:~/Hassan$ mkdir BAD
+osc@osc:~/Hassan$ cd BAD
+osc@osc:~/Hassan/BAD$ touch bad.txt
+osc@osc:~/Hassan/BAD$ cd ..
+osc@osc:~/Hassan$ mv one.txt /home/osc/Downloads
+osc@osc:~/Hassan$ cd /home/osc/Downloads
+osc@osc:~/Downloads$ cp one.txt /home/osc/Downloads/copy.txt
+osc@osc:~/Downloads$ cd /home/osc/Hassan
+osc@osc:~/Hassan$ nano two.txt
+osc@osc:~/Hassan$ nano three.txt
+osc@osc:~/Hassan$ mv three.txt hello.txt
+osc@osc:~/Hassan$ rm four.txt
+osc@osc:~/Hassan$ rm -r BAD
