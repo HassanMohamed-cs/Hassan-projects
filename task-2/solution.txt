@@ -1,0 +1,23 @@
+osc@osc:~$ git config --global user.name HassanMohamed-cs
+osc@osc:~$ git config --global user.email hassanashour639@gmail.com
+osc@osc:~$ gh auth login -w
+osc@osc:~$ gh repo clone Hassan-projects
+osc@osc:~$ cd Hassan-projects
+osc@osc:~/Hassan-projects$ mkdir task-2
+osc@osc:~/Hassan-projects$ cd task-2
+osc@osc:~/Hassan-projects/task-2$ touch greeting.txt
+osc@osc:~/Hassan-projects/task-2$ echo hello world >> greeting.txt
+osc@osc:~/Hassan-projects/task-2$ cd ..
+osc@osc:~/Hassan-projects$ git add task-2
+osc@osc:~/Hassan-projects$ git commit -m Added greeting
+osc@osc:~/Hassan-projects$ git checkout -b intro
+osc@osc:~/Hassan-projects$ cd task-2
+osc@osc:~/Hassan-projects/task-2$ nano greeting.txt
+osc@osc:~/Hassan-projects/task-2$ cd ..
+osc@osc:~/Hassan-projects$ git add task-2
+osc@osc:~/Hassan-projects$ git commit -m Added I love git
+osc@osc:~/Hassan-projects$ git checkout main
+osc@osc:~/Hassan-projects$ git merge intro
+osc@osc:~/Hassan-projects$ git tag -a v1
+osc@osc:~/Hassan-projects$ git push
+
