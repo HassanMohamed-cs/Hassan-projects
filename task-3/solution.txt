@@ -1,0 +1,45 @@
+mkdir /home/osc/project_files
+mkdir /home/osc/project_files/reports
+mkdir /home/osc/project_files/logs
+mkdir /home/osc/project_files/data
+cd /home/osc/project_files/reports
+touch report1.md report2.md
+cd /home/osc/project_files/logs
+touch system.log error.log file1.pdf file2.pdf
+touch /home/osc/project_files/data/data.csv /home/osc/project_files/data/info.txt
+nano /home/osc/project_files/reports/report1.md
+nano /home/osc/project_files/logs/system.log
+nano /home/osc/project_files/data/data.csv
+cd /home/osc/project_files/logs
+tar -cf logs_backup.tar system.log error.log file1.pdf file2.pdf
+mv logs_backup.tar /home/osc/project_files
+tar -xvf logs_backup.tar -C /home/osc/project_files/logs
+find /home/osc -name "*.md"
+find /home/osc/project_files -name "*.log"
+find /home/osc/project_files -name "file1.pdf"
+find /home/osc/project_files -iname "*.pdf"
+find /home/osc/project_files/logs -type f
+ln -s /home/osc/project_files/data/data.csv /home/osc/project_files/link_data.csv
+echo "Hassan" > link_data.csv
+cat /home/osc/project_files/data/data.csv
+unlink /home/osc/project_files/link_data.csv
+touch /home/osc/project_files/summary.txt
+echo "Summary Start" > /home/osc/project_files/summary.txt
+date >> /home/osc/project_files/summary.txt
+wc -l < /home/osc/project_files/summary.txt | tee -a /home/osc/project_files/summary.txt
+wc -w < /home/osc/project_files/reports/report1.md
+1
+wc -c < /home/osc/project_files/logs/system.log 1>> /home/osc/project_files/summary.txt
+cat /home/osc/project_files/summary.txt 
+Summary Start
+Tue Aug 20 05:51:35 PM EEST 2024
+2
+5
+ls -la /home/osc/project_files | wc -l | tee -a /home/osc/project_files/summary.txt
+cat /home/osc/project_files/summary.txt 
+Summary Start
+Tue Aug 20 05:51:35 PM EEST 2024
+2
+5
+8
+
