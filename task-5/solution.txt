@@ -1,0 +1,3 @@
+cut -f 2 -d "," /home/osc/Hassan-projects/task-5/info.csv | sort | uniq | tee /home/osc/Hassan-projects/task-5/emails.txt
+ps -e -o pid,cmd | sort -k 2 | grep -v "PID CMD" |tee /home/osc/Hassan-projects/task-5/processes.txt
+
